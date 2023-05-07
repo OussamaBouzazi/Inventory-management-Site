@@ -28,6 +28,7 @@ import { PageCmdCltFrsComponent } from './pages/page-cmd-clt-frs/page-cmd-clt-fr
 import { NouvelleCmdCltFrsComponent } from './composants/nouvelle-cmd-clt-frs/nouvelle-cmd-clt-frs.component';
 import { PageProfilComponent } from './pages/profil/page-profil/page-profil.component';
 import { ChangerMotDePasseComponent } from './pages/profil/changer-mot-de-passe/changer-mot-de-passe.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ChangerMotDePasseComponent } from './pages/profil/changer-mot-de-passe/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    A11yModule
+    A11yModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
