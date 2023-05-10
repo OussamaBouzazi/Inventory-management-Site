@@ -28,7 +28,13 @@ import { PageCmdCltFrsComponent } from './pages/page-cmd-clt-frs/page-cmd-clt-fr
 import { NouvelleCmdCltFrsComponent } from './composants/nouvelle-cmd-clt-frs/nouvelle-cmd-clt-frs.component';
 import { PageProfilComponent } from './pages/profil/page-profil/page-profil.component';
 import { ChangerMotDePasseComponent } from './pages/profil/changer-mot-de-passe/changer-mot-de-passe.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+
+
+import {HttpClientModule} from '@angular/common/http';
+import { NouvelCategorieComponent } from './pages/categories/nouvel-categorie/nouvel-categorie.component';
+import { PageCategorieComponent } from './pages/categories/page-categorie/page-categorie.component';
+import {CategoryService} from './services/category/category.service'
 
 
 @NgModule({
@@ -57,15 +63,19 @@ import { FormsModule } from '@angular/forms';
     PageCmdCltFrsComponent,
     NouvelleCmdCltFrsComponent,
     PageProfilComponent,
-    ChangerMotDePasseComponent
+    ChangerMotDePasseComponent,
+    NouvelCategorieComponent,
+    PageCategorieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     A11yModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
